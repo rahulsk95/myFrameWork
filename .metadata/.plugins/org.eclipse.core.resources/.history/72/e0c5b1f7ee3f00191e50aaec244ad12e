@@ -1,0 +1,10 @@
+package pages;
+
+import org.openqa.selenium.By;
+
+public class GoogleSearchPageMethod2 {
+
+	By textbox_search = By.name("q");
+	
+	By button_search = By.name("btnk");
+}

@@ -1,0 +1,27 @@
+package test;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import pages.GoogleSearchPage;
+
+public class Test1_GoogleSearch2FW {
+
+	private static WebDriver driver = null;
+
+	public static void main(String[] args) throws InterruptedException {
+		googleSearch();
+	}
+
+	public static void googleSearch() throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+
+		GoogleSearchPage.textbox_search(driver).sendKeys("Selenium Automation");
+		GoogleSearchPage.button_search(driver).sendKeys(Keys.RETURN);
+		
+
+	}
+}
